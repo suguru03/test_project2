@@ -10,8 +10,6 @@
 
   */
 
-
-
   export const ADD_VALUE = 'ADD_VALUE';
 
   // addvalue = (amount) => ({ ~ });の省略系でも可

@@ -4,10 +4,9 @@
     ・ConnectによるReducerへの接続
 */
 
-
 import React, {Component} from 'react';
 import {connect} from 'react-native';
-import {addvalue} from './actions';
+import {addvalue} from '../actions/actions';
 
 const Counter = ({value, dispatchAddValue}) => {
     <div>
