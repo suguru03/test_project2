@@ -5,20 +5,14 @@
 */
 
 import React, {Component} from 'react';
-import {connect} from 'react-native';
+import { View, Text } from 'react-native';
+import {connect} from 'react-redux';
 import {addvalue} from '../actions/actions';
 
 const Counter = ({value, dispatchAddValue}) => {
-    <div>
-        Value: {value}
-        <a href = "#" onClick = {e => dispatchAddValue(1)}> +1 </a>
-        <a href = "#" onClick = {e => dispatchAddValue(5)}> +5 </a>
-        <a href = "#" onClick = {e => dispatchAddValue(10)}> +10 </a>
-
-        <a href = "#" onClick = {e => dispatchAddValue(-1)}> -1 </a>
-        <a href = "#" onClick = {e => dispatchAddValue(-5)}> -5 </a>
-        <a href = "#" onClick = {e => dispatchAddValue(-10)}> -10 </a>
-    </div>
+    return (<View>
+      <Text>Hello World!</Text>
+    </View>);
 };
 
 
@@ -38,7 +32,7 @@ export default connect(
     dispatch => ({dispatchAddValue: amount => dispatch(addValue(amount))})
 )(Counter);
 
-/* 省略形 
+/* 省略形
    1. dispatch => bindActionCreators({ addvalue }, dispatch)
    2. { addvalue }
 */

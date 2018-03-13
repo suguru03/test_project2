@@ -8,8 +8,9 @@
 import Reactotron from 'reactotron-react-native';
 
 // createStoreでStoreを作成する
-import {createStore} from 'redux';
-import reducerTmp from './reducers';
+import Thunk from 'redux-thunk';
+import { applyMiddleware, compose, createStore } from 'redux';
+import reducerTmp from './reducers/reducer_tmp';
 
-export default Reactotron.createStore(reducerTmp); //reactotronのcreateStore
+export default Reactotron.createStore(reducerTmp, compose(applyMiddleware(Thunk))); //reactotronのcreateStore
 //let store = createStore(reducerTmp); //普通のcreateStore

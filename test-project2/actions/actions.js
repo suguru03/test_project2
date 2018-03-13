@@ -10,8 +10,9 @@
 
   */
 
-  export const ADD_VALUE = 'ADD_VALUE';
+export const ADD_VALUE = 'ADD_VALUE';
 
-  // addvalue = (amount) => ({ ~ });の省略系でも可
-  export const addvalue = (amount) => {return{ type: ADD_VALUE, payload: amount }};
-  
+// addvalue = (amount) => ({ ~ });の省略系でも可
+export const addvalue = (amount) => {
+  return { type: ADD_VALUE, payload: amount }
+};

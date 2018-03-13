@@ -7,17 +7,19 @@
 import './ReactotronConfig';
 
 import React,{ Component } from 'react';
+import { Provider } from 'react-redux';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Counter from './components/Counter';
+import store from './store';
 
 
 export default class App extends Component{
   render(){
     return(
-      <div>
+      <Provider store={store}>
          <Counter onClick = {text => console.log("数値: " + "%d",state.value)} />
-      </div>
+      </Provider>
     )
   }
 }
